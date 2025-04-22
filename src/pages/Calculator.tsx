@@ -33,7 +33,7 @@ const Calculator = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-500/10 via-purple-500/10 to-fuchsia-500/10 p-6 font-['Space_Grotesk']">
+    <div className="min-h-screen bg-gradient-to-br from-violet-950/10 via-purple-950/10 to-fuchsia-950/10 p-6 font-['Space_Grotesk']">
       <div className="max-w-md mx-auto space-y-8">
         <div className="flex items-center justify-between animate-fade-in">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
@@ -42,12 +42,12 @@ const Calculator = () => {
           <CalcIcon className="h-8 w-8 text-purple-600 animate-pulse" />
         </div>
 
-        <Card className="backdrop-blur-lg bg-white/10 border border-white/20 p-6 shadow-xl shadow-purple-500/10">
-          <div className="bg-white/5 rounded-xl p-6 mb-6">
+        <Card className="backdrop-blur-lg bg-white/20 border border-white/30 p-6 shadow-xl shadow-purple-500/10">
+          <div className="bg-slate-900/70 rounded-xl p-6 mb-6">
             <div className="text-sm text-purple-300 h-6 text-right animate-slide-right">
               {equation}
             </div>
-            <div className="text-4xl font-bold tracking-wider text-right animate-slide-left">
+            <div className="text-4xl font-bold tracking-wider text-right text-white animate-slide-left">
               {display}
             </div>
           </div>
@@ -78,7 +78,7 @@ const Calculator = () => {
               <Button
                 key={num}
                 onClick={() => handleNumber(num.toString())}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
+                className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
               >
                 {num}
               </Button>
@@ -94,7 +94,7 @@ const Calculator = () => {
               <Button
                 key={num}
                 onClick={() => handleNumber(num.toString())}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
+                className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
               >
                 {num}
               </Button>
@@ -110,7 +110,7 @@ const Calculator = () => {
               <Button
                 key={num}
                 onClick={() => handleNumber(num.toString())}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
+                className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
               >
                 {num}
               </Button>
@@ -124,19 +124,19 @@ const Calculator = () => {
 
             <Button
               onClick={() => handleNumber("0")}
-              className="col-span-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
+              className="col-span-2 bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
             >
               0
             </Button>
             <Button
               onClick={() => handleNumber(".")}
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
+              className="bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm text-lg font-medium hover:scale-105 transition-transform"
             >
               .
             </Button>
             <Button
               onClick={calculate}
-              className="bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-violet-600 to-purple-600 text-white hover:from-violet-700 hover:to-purple-700 hover:scale-105 transition-all duration-300"
             >
               <Equal className="h-4 w-4" />
             </Button>
@@ -148,3 +148,4 @@ const Calculator = () => {
 };
 
 export default Calculator;
+

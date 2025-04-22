@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-import { Settings as SettingsIcon, ChevronRight, SliderVertical } from "lucide-react";
+import { Settings as SettingsIcon, ChevronRight, SlidersVertical } from "lucide-react";
 
 const Settings = () => {
   const [notifications, setNotifications] = useState(false);
@@ -98,7 +97,7 @@ const Settings = () => {
             </div>
             <Button variant="outline" className="w-full group hover:scale-105 transition-transform">
               Check for Updates
-              <SliderVertical className="ml-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+              <SlidersVertical className="ml-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
             </Button>
           </div>
         </Card>

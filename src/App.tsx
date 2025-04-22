@@ -10,12 +10,14 @@ import Health from "./pages/Health";
 import Currency from "./pages/Currency";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import SplashScreen from "./components/SplashScreen";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <SplashScreen />
       <Toaster />
       <Sonner />
       <BrowserRouter>

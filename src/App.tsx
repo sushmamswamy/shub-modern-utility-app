@@ -19,16 +19,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Navigate to="/calculator" replace />} />
-            <Route path="/calculator" element={<Calculator />} />
-            <Route path="/health" element={<Health />} />
-            <Route path="/currency" element={<Currency />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
+        <Routes>
+          <Route path="/" element={<Navigate to="/calculator" replace />} />
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
+          <Route path="/calculator" element={<Layout><Calculator /></Layout>} />
+          <Route path="/health" element={<Layout><Health /></Layout>} />
+          <Route path="/currency" element={<Layout><Currency /></Layout>} />
+          <Route path="/settings" element={<Layout><Settings /></Layout>} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
